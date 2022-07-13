@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import ipdb
 from lib.data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
                                 get_spicy_food_by_cuisine, sort_by_heat, \
                                 print_spiciest_foods, get_average_heat_level
@@ -81,6 +81,7 @@ class TestDataStructures:
         sys.stdout = captured_out
         print_spiciest_foods(TestDataStructures.SPICY_FOODS)
         sys.stdout = sys.__stdout__
+        # ipdb.set_trace()
         assert(captured_out.getvalue() == "Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶\n" +
             "Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶\n")
 
